@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="灵语 Memo · 个人剧集语言笔记本" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2343304b'/%3E%3Ctext x='32' y='44' text-anchor='middle' fill='%23f5f0e7' font-size='34'%3ELM%3C/text%3E%3C/svg%3E" />
+    <title>Notebook · 灵语 Memo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="custom-notebook-page" data-notebook-detail>
+    <div class="reading-progress" aria-hidden="true"><span id="progressBar"></span></div>
+    <header class="site-header" id="top">
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="回到灵语 Memo 首页">LM<span>／</span><span id="detailNumber">00</span></a>
+        <p class="header-note">PERSONAL SERIES NOTEBOOK</p>
+        <a class="header-link" href="index.html">All notebooks <span>↗</span></a>
+      </div>
+    </header>
+
+    <main>
+      <section class="custom-cover content-width">
+        <div class="custom-cover-meta"><span class="cover-kicker"><span class="eyebrow-dot"></span> MY NOTEBOOK</span><span id="detailStatus">First Watch</span></div>
+        <h1 id="detailTitle">Notebook</h1>
+        <p class="custom-chinese-title" id="detailChineseTitle">剧集名称</p>
+        <p class="custom-description" id="detailDescription">正在加载这本笔记本……</p>
+        <div class="custom-cover-footer"><span>WORDS · QUOTES · AFTERTHOUGHTS</span><button id="deleteNotebook" class="text-button danger-button" type="button">删除这本笔记本</button></div>
+      </section>
+
+      <section class="note-workspace content-width">
+        <div class="section-heading"><span class="section-index">01</span><div><p class="section-kicker">✦ VISUAL LEARNING CARDS</p><h2>Notes <i>in context</i></h2></div></div>
+        <div class="learning-grid" id="personalNotesGrid"></div>
+        <section class="note-editor">
+          <div class="note-editor-heading"><p class="section-kicker">ADD A NOTE</p><h3>把下一句留下来。</h3><p>可以手动添加，也可以把 AI 已经整理好的结构化笔记一次导入。</p><button class="import-button" type="button" data-ai-import>从 AI 整理稿导入 ↗</button></div>
+          <form id="noteForm" class="memo-form">
+            <div class="form-columns"><label>词语 / 表达<input name="term" required placeholder="例如：nuanced" /></label><label>分类<input name="category" placeholder="例如：SLANG / CULTURE" /></label></div>
+            <label>原句或语境<textarea name="quote" rows="2" placeholder="它在剧里是怎么出现的？"></textarea></label>
+            <label>我的解释<textarea name="explanation" required rows="3" placeholder="它是什么意思？为什么值得记下来？"></textarea></label>
+            <label>个人感想（可选）<textarea name="reflection" rows="3" placeholder="它让我想到什么？"></textarea></label>
+            <button class="primary-button" type="submit">保存学习卡 <span>↗</span></button>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <footer class="home-footer content-width"><span>灵语 Memo</span><span>Saved in this browser</span><a href="#top">↑ 回到顶部</a></footer>
+    <script src="app.js"></script>
+  </body>
+</html>

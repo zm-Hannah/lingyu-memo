@@ -10,6 +10,7 @@
   </head>
   <body class="home-page">
     <div class="reading-progress" aria-hidden="true"><span id="progressBar"></span></div>
+
     <header class="site-header" id="top">
       <div class="header-inner">
         <a class="brand" href="index.html" aria-label="灵语 Memo 首页">LM<span>／</span>00</a>
@@ -17,6 +18,7 @@
         <a class="header-link" href="#collection">Notebooks <span>↘</span></a>
       </div>
     </header>
+
     <main>
       <section class="home-intro content-width">
         <div class="home-intro-top"><p class="cover-kicker"><span class="eyebrow-dot"></span> 灵语 Memo · Series Notebook</p><p class="home-date">LANGUAGE · CULTURE · AFTERTHOUGHTS</p></div>
@@ -27,6 +29,7 @@
         <div class="cover-rule"></div>
         <div class="cover-meta"><span>OPEN NOTEBOOKS</span><span id="notebookCount">01</span></div>
       </section>
+
       <section class="collection content-width" id="collection">
         <div class="collection-heading"><div><p class="section-kicker">✦ THE COLLECTION</p><h2>Series <i>Notebooks</i></h2></div><p class="collection-note">选择一部剧，<br />打开它的语言和余韵。</p></div>
         <div class="collection-tools">
@@ -36,24 +39,36 @@
         <div class="notebook-grid" id="notebookGrid" aria-live="polite"></div>
         <p class="empty-search" id="emptySearch" hidden>没有找到匹配的笔记本。试试别的关键词。</p>
       </section>
-      <section class="home-note content-width"><div class="home-note-mark">✦</div><div><p class="section-kicker">A LIVING ARCHIVE</p><p>这不是一份标准答案式的词汇表。每一本 Memo 都保留观看者自己的语气、误听、联想和感受。</p></div></section>
+
+      <section class="home-note content-width">
+        <div class="home-note-mark">✦</div>
+        <div><p class="section-kicker">A LIVING ARCHIVE</p><p>这不是一份标准答案式的词汇表。每一本 Memo 都保留观看者自己的语气、误听、联想和感受。</p></div>
+      </section>
     </main>
+
     <footer class="home-footer content-width"><span>灵语 Memo</span><span>Words · Culture · Memory</span><a href="#top">↑ 回到顶部</a></footer>
+
     <div class="modal-shell" id="notebookModal" hidden>
       <div class="modal-backdrop" data-close-modal></div>
       <section class="entry-modal" role="dialog" aria-modal="true" aria-labelledby="notebookModalTitle">
         <button class="modal-close" type="button" data-close-modal aria-label="关闭">×</button>
-        <p class="section-kicker">✦ NEW NOTEBOOK</p><h2 id="notebookModalTitle">给下一部剧<br /><em>留一页。</em></h2>
+        <p class="section-kicker">✦ NEW NOTEBOOK</p>
+        <h2 id="notebookModalTitle">给下一部剧<br /><em>留一页。</em></h2>
         <p class="modal-intro">先写下剧名和你对它的第一印象，之后可以在详情页一点点添加学习卡。</p>
         <form id="notebookForm" class="memo-form">
           <label>剧集英文名<input name="title" required placeholder="例如：Atlanta" /></label>
           <label>中文名（可选）<input name="chineseTitle" placeholder="例如：《亚特兰大》" /></label>
           <label>一句话介绍<textarea name="description" rows="2" placeholder="我为什么想记录这部剧……"></textarea></label>
           <div class="form-columns"><label>观看状态<select name="status"><option>First Watch</option><option>Rewatch</option><option>In progress</option></select></label><label>主色调<select name="accent"><option value="purple">紫色</option><option value="orange">橙色</option></select></label></div>
-          <div class="form-actions"><button class="primary-button" name="createMode" value="normal" type="submit">创建笔记本 <span>↗</span></button><button class="import-button" name="createMode" value="import" type="submit">创建并导入 AI 笔记</button><button class="text-button" type="button" data-close-modal>先不创建</button></div>
+          <div class="form-actions">
+            <button class="primary-button" name="createMode" value="normal" type="submit">创建笔记本 <span>↗</span></button>
+            <button class="import-button" name="createMode" value="import" type="submit">创建并导入 AI 笔记</button>
+            <button class="text-button" type="button" data-close-modal>先不创建</button>
+          </div>
         </form>
       </section>
     </div>
+
     <script src="notebooks.js"></script>
     <script src="app.js"></script>
   </body>
